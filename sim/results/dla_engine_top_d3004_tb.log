@@ -1,0 +1,3 @@
+VCD info: dumpfile dla_engine_top_d3004_tb.vcd opened for output.
+PASS: output -34139 matches expected
+tb\dla_engine_top_d3004_tb.sv:180: $finish called at 7845000 (1ps)

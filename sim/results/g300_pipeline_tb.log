@@ -1,0 +1,3 @@
+VCD info: dumpfile g300_pipeline_tb.vcd opened for output.
+PASS: output matches expected
+tb\g300_pipeline_tb.sv:111: $finish called at 2847135000 (1ps)

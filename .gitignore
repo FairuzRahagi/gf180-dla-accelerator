@@ -1,0 +1,20 @@
+# Simulation artifacts
+*.vvp
+*.vcd
+out/
+
+# Large or regenerable
+weights/
+openlane/runs/
+runs/
+*.ext
+*.mag
+*.nodes
+*.sim
+
+# Local / OS
+__pycache__/
+*.pyc
+.vscode/
+.DS_Store
+Thumbs.db

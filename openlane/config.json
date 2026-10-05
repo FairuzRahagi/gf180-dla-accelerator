@@ -1,0 +1,63 @@
+{
+    "DESIGN_NAME": "dla_engine_top",
+    "PDN_CFG": "dir::pdn_cfg.tcl",
+    "VERILOG_FILES": "dir::src/*.v",
+    "VERILOG_DEFINES": [
+        "SYNTHESIS"
+    ],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 22.0,
+    "PDK": "gf180mcuD",
+    "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 0.4,
+    "GRT_RESIZER_HOLD_SLACK_MARGIN": 0.3,
+    "MAGIC_DRC_USE_GDS": false,
+    "ERROR_ON_MAGIC_DRC": false,
+    "FP_CORE_UTIL": 25,
+    "FP_PDN_VPITCH": 50,
+    "MACROS": {
+        "gf180mcu_ocd_ip_sram__sram256x8m8wm1": {
+            "gds": [
+                "dir::macro/sram.gds"
+            ],
+            "lef": [
+                "dir::macro/sram.lef"
+            ],
+            "lib": {
+                "*": [
+                    "dir::macro/sram.lib"
+                ]
+            },
+            "instances": {
+                "u_a_buffer.GEN_SRAM.GEN_A_ROWS[0].u_sram.u_sram": { "location": [10, 15], "orientation": "N" },
+                "u_a_buffer.GEN_SRAM.GEN_A_ROWS[1].u_sram.u_sram": { "location": [10, 250], "orientation": "N" },
+                "u_a_buffer.GEN_SRAM.GEN_A_ROWS[2].u_sram.u_sram": { "location": [10, 485], "orientation": "N" },
+                "u_a_buffer.GEN_SRAM.GEN_A_ROWS[3].u_sram.u_sram": { "location": [10, 720], "orientation": "N" },
+                "u_b_buffer.GEN_SRAM.GEN_B_COLS[0].u_sram.u_sram": { "location": [360, 15], "orientation": "N" },
+                "u_b_buffer.GEN_SRAM.GEN_B_COLS[1].u_sram.u_sram": { "location": [360, 250], "orientation": "N" },
+                "u_b_buffer.GEN_SRAM.GEN_B_COLS[2].u_sram.u_sram": { "location": [360, 485], "orientation": "N" },
+                "u_b_buffer.GEN_SRAM.GEN_B_COLS[3].u_sram.u_sram": { "location": [360, 720], "orientation": "N" },
+                "u_c_buffer.GEN_SRAM.u_sram0.u_sram": { "location": [710, 15], "orientation": "N" },
+                "u_c_buffer.GEN_SRAM.u_sram1.u_sram": { "location": [710, 250], "orientation": "N" },
+                "u_c_buffer.GEN_SRAM.u_sram2.u_sram": { "location": [710, 485], "orientation": "N" }
+            }
+        }
+    },
+    "VDD_NETS": [
+        "vccd1"
+    ],
+    "GND_NETS": [
+        "vssd1"
+    ],
+    "FP_PDN_MACRO_HOOKS": [
+        ".* vccd1 vssd1 VDD VSS"
+    ],
+    "PL_TARGET_DENSITY_PCT": 45,
+    "DRT_THREADS": 4,
+    "QUIT_ON_SYNTH_CHECKS": false,
+    "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
+    "SKIP_STEPS": [
+        "OpenROAD.IRDropReport"
+    ],
+    "RUN_IRDROP_REPORT": false
+}
